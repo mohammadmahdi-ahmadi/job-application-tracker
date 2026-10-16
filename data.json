@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "company": "Sample Studio",
+    "role": "Frontend Intern",
+    "status": "Saved",
+    "note": "Prepare portfolio"
+  },
+  {
+    "id": 2,
+    "company": "Demo Digital",
+    "role": "Junior Developer",
+    "status": "Applied",
+    "note": "Application sent"
+  },
+  {
+    "id": 3,
+    "company": "Practice Labs",
+    "role": "Web Assistant",
+    "status": "Interview",
+    "note": "Review DOM"
+  },
+  {
+    "id": 4,
+    "company": "Example Services",
+    "role": "Site Editor",
+    "status": "Closed",
+    "note": "Position filled"
+  },
+  {
+    "id": 5,
+    "company": "Sample Academy",
+    "role": "Coding Assistant",
+    "status": "Saved",
+    "note": "Read requirements"
+  }
+]

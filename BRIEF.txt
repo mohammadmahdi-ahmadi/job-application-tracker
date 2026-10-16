@@ -1,0 +1,31 @@
+10. Job Application Tracker
+
+PURPOSE
+Help a job seeker organise opportunities and follow their application progress.
+
+SCREEN
+Status summary, opportunity cards and add/edit-note forms.
+
+REQUIRED FEATURES
+- List application cards; search company or role and filter status.
+- Add a saved opportunity, delete it, and edit a short follow-up note.
+- Update status to Saved, Applied, Interview or Closed using a select control.
+- Show total, active (not Closed) and interview counts.
+
+RULES
+- Company and role: 2–80 characters; note: up to 160 characters.
+- New entries start Saved; all listed status changes are allowed to correct mistakes.
+- All employers are fictional; no real job listings or messages are sent.
+
+STARTER DATA
+Read data.json: it is an array of 5 objects. Field names: id,company,role,status,note. IDs identify source records. For new records, choose numeric IDs greater than the largest existing ID and increment them. New carts, plans and session registration lists start empty; the source catalogue remains separate.
+
+ACCEPTANCE CHECKS (each starts from fresh seed data unless stated)
+- Initial totals: 5 overall, 4 active, 1 interview.
+- Change entry 2 to Interview: interview count 2.
+- Delete entry 4: 4 overall and still 4 active; whitespace company is rejected.
+
+OPTIONAL EXTENSION
+Add an active-only filter.
+
+Read START-HERE.txt and CSS-GUIDE.txt in the package root. Complete the required features before attempting the extension. All seed names, businesses, prices and records are fictional classroom examples.

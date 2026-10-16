@@ -1,0 +1,207 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    ```
+    <header class="app-header">
+      <div class="container">
+        <nav class="nav" aria-label="Main navigation">
+          <div>
+            <h1>Job Application Tracker</h1>
+            <p>
+              Organise your opportunities and track your application progress.
+            </p>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <!-- Loading / Error Messages -->
+        <section aria-labelledby="status-heading">
+          <h2 id="status-heading" class="hidden">Application status</h2>
+
+          <div id="loading-message" class="message warning" role="status">
+            Loading applications...
+          </div>
+
+          <div id="error-message" class="message error" role="alert" hidden>
+            <p>We could not load your applications.</p>
+            <button type="button" id="retry-button">Retry</button>
+          </div>
+
+          <div
+            id="success-message"
+            class="message success"
+            role="status"
+            hidden
+          >
+            Action completed successfully.
+          </div>
+        </section>
+
+        <!-- Summary -->
+        <section class="summary" aria-labelledby="summary-heading">
+          <h2 id="summary-heading">Summary</h2>
+
+          <div class="stat">
+            <span>Total</span>
+            <strong id="total-count">0</strong>
+          </div>
+
+          <div class="stat">
+            <span>Active</span>
+            <strong id="active-count">0</strong>
+          </div>
+
+          <div class="stat">
+            <span>Interviews</span>
+            <strong id="interview-count">0</strong>
+          </div>
+        </section>
+
+        <!-- Search and Filters -->
+        <section class="panel" aria-labelledby="filter-heading">
+          <h2 id="filter-heading">Find applications</h2>
+
+          <form id="filter-form" class="toolbar">
+            <div class="field">
+              <label for="search-input">Search company or role</label>
+              <input
+                type="search"
+                id="search-input"
+                name="search"
+                placeholder="Search..."
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="field">
+              <label for="status-filter">Filter by status</label>
+              <select id="status-filter" name="status">
+                <option value="all">All statuses</option>
+                <option value="Saved">Saved</option>
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Closed">Closed</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="active-filter">
+                <input type="checkbox" id="active-filter" />
+                Active applications only
+              </label>
+            </div>
+
+            <button type="button" id="clear-filters" class="btn-secondary">
+              Clear filters
+            </button>
+          </form>
+        </section>
+
+        <!-- Main Workspace -->
+        <div class="workspace">
+          <!-- Application List -->
+          <section class="main-panel" aria-labelledby="applications-heading">
+            <h2 id="applications-heading">Applications</h2>
+
+            <div id="empty-state" class="empty-state" hidden>
+              <h3>No applications found</h3>
+              <p class="muted">
+                Try changing your search or filters, or add a new opportunity.
+              </p>
+            </div>
+
+            <div id="application-list" class="cards">
+              <!-- Application cards will be created by JavaScript -->
+            </div>
+          </section>
+
+          <!-- Add Opportunity -->
+          <aside class="side-panel">
+            <section class="panel" aria-labelledby="add-heading">
+              <h2 id="add-heading">Add opportunity</h2>
+
+              <p class="muted">
+                Add a fictional job opportunity to your tracker.
+              </p>
+
+              <form id="add-form">
+                <div class="field">
+                  <label for="company">Company</label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    minlength="2"
+                    maxlength="80"
+                    required
+                  />
+                  <p id="company-error" class="message error" hidden>
+                    Company must be between 2 and 80 characters.
+                  </p>
+                </div>
+
+                <div class="field">
+                  <label for="role">Role</label>
+                  <input
+                    type="text"
+                    id="role"
+                    name="role"
+                    minlength="2"
+                    maxlength="80"
+                    required
+                  />
+                  <p id="role-error" class="message error" hidden>
+                    Role must be between 2 and 80 characters.
+                  </p>
+                </div>
+
+                <div class="field">
+                  <label for="note">Follow-up note</label>
+                  <textarea
+                    id="note"
+                    name="note"
+                    maxlength="160"
+                    placeholder="Optional note..."
+                  ></textarea>
+                  <p class="muted">Maximum 160 characters.</p>
+                </div>
+
+                <button type="submit" id="add-button">Add opportunity</button>
+              </form>
+            </section>
+          </aside>
+        </div>
+
+        <!-- Demo Notice -->
+        <section class="panel" aria-labelledby="demo-heading">
+          <h2 id="demo-heading">Demo information</h2>
+          <p class="muted">Demo: changes reset when this page reloads.</p>
+          <p class="muted">
+            All employers and opportunities in this project are fictional. No
+            real job applications or messages are sent.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <div class="container">
+        <p>Job Application Tracker — Practice Project</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+    ```
+  </body>
+</html>
